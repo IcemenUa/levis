@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
 @font-face{
     font-family: 'lato';
     font-style: normal;
@@ -6,7 +11,12 @@ src: url(assets/fonts/lato/Lato-Black.ttf)
 @font-face{
   font-family: 'interstate';
   font-style: normal;
-src: url(assets/fonts/Interstate/InterstateBlackRegular.otf)
+src: url(assets/fonts/Interstate/InterstateBlackRegular.ttf)
+}
+@font-face{
+  font-family: 'interstateBold';
+  font-style: normal;
+src: url(assets/fonts/Interstate/Interstate-bold.ttf)
 }
 @font-face{
   font-family: 'Helvetica Now Text';
@@ -22,11 +32,7 @@ src: url(assets/fonts/lato/Lato-Bold.ttf)
   font-style:normal;
 src: url(assets/fonts/helvetica/helvetica-bold.ttf)
 }
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box
-}
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';

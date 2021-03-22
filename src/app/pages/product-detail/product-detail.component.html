@@ -1,0 +1,105 @@
+<div class="detail-container">
+  <div class="detail-container__images">
+    <carousel height=90vh width=50% loop=true cellsToShow=1 overflowCellsLimit=1 dots=true>
+      <div class="carousel-cell">
+        <img [src]="product?.productImages[0]">
+      </div>
+      <div class="carousel-cell">
+        <img [src]="product?.productImages[1]">
+      </div>
+      <div class="carousel-cell">
+        <img [src]="product?.productImages[2]">
+      </div>
+    </carousel>
+  </div>
+  <div class="detail-container__about-and-buy">
+
+    <p class="detail-container__about-and-buy__product-name">{{product.productName}}</p>
+    <!-- about product and buy options -->
+    <div class="detail-container__about-and-buy__select-size">
+
+      <p>Select Size:</p>
+      <!-- radio size form -->
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-XS" type="radio" name="radio" value="XS" [disabled]=!product.XS>
+        <label for="radio-XS">XS</label>
+      </div>
+
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-S" type="radio" name="radio" value="S" [disabled]=!product.S>
+        <label for="radio-S">S</label>
+      </div>
+
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-M" type="radio" name="radio" value="M" [disabled]=!product.M>
+        <label for="radio-M">M</label>
+      </div>
+
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-L" type="radio" name="radio" value="L" [disabled]=!product.L>
+        <label for="radio-L">L</label>
+      </div>
+
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-XL" type="radio" name="radio" value="XL" [disabled]=!product.XL>
+        <label for="radio-XL">XL</label>
+      </div>
+
+      <div class="detail-container__about-and-buy__select-size-form-radio-btn">
+        <input id="radio-XXL" type="radio" name="radio" value="XXL" [disabled]=!product.XXL>
+        <label for="radio-XXL">XXL</label>
+      </div>
+
+    </div>
+    <!-- product price -->
+    <div class="detail-container__about-and-buy__quantity-price">
+      <div class="detail-container__about-and-buy__quantity-price__product-quantity">
+
+        <button class="detail-container__about-and-buy__quantity-price__product-quantity__btn"
+          (click)="quantityDecrement()">-</button>
+
+        <span class="detail-container__about-and-buy__quantity-price__product-quantity__number">{{quantity}}</span>
+
+        <button class="detail-container__about-and-buy__quantity-price__product-quantity__btn"
+          (click)="quantityIncrement()">+</button>
+
+      </div>
+
+      <div class="detail-container__about-and-buy__quantity-price__product-price">
+        <p>Price: {{+product.productPrice*quantity | currency:'USD':'symbol-narrow' }}</p>
+      </div>
+
+    </div>
+
+    <button class="detail-container__about-and-buy__add-to-cart-btn">Add to Bag</button>
+
+    <!-- product description -->
+    <div class="detail-container__about-and-buy__description">
+      <p>{{product.description}}</p>
+
+      <div class="detail-container__about-and-buy__description__tezis">
+
+        <div class="detail-container__about-and-buy__description__tezis__how-it-fits">
+          <p>How it Fits:</p>
+          <div class="tezis">
+            <ul>
+              <li *ngFor="let tezis of product.howItFits">{{tezis}}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="detail-container__about-and-buy__description__tezis__composition-and-care">
+          <p>Composition & Care:</p>
+          <div class="tezis">
+            <ul>
+              <li *ngFor="let tezis of product.compositionAndCare">{{tezis}}</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

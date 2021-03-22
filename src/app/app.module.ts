@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeSpecialOfferComponent } from './pages/home-page/home-special-offer/home-special-offer.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { BasketComponent } from './pages/basket/basket.component';
 
 
 
@@ -35,8 +36,7 @@ import { HomeOfferCardsComponent } from './pages/home-page/home-offer-cards/home
 import { HttpClientModule } from '@angular/common/http';
 import { EmbedVideo } from 'ngx-embed-video';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 
@@ -61,6 +61,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AdminProductsComponent,
     ShopComponent,
     ProductDetailComponent,
+    BasketComponent,
     
     
     
@@ -79,7 +80,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     FormsModule,
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),
-    CarouselModule.forRoot()
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

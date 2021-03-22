@@ -36,7 +36,7 @@ export class ShopComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+
   }
   logID(prodID): void {
     console.log(prodID);
@@ -55,11 +55,7 @@ export class ShopComponent implements OnInit {
           this.productsArr.push({ id, ...data });
         });
       }
-    );
-    // this.firestore.collection('products').ref.where('productSubCategory', '==', subCategoryName).where('productSubCategory', '==', subCategoryName).
-    console.log(categoryName, subCategoryName);
-    console.log(this.productsArr);
-
+    )
   }
 
 
